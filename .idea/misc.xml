@@ -3,8 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_add_appointment.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_appointments.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_home.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_launcher_background.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_relative.xml" value="0.184375" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/layout/activity_main.xml" value="0.16822916666666668" />
-        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/layout/fragment_splash.xml" value="0.16822916666666668" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/layout/fragment_splash.xml" value="0.25" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/layout/home_fragment.xml" value="0.25" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/menu/home_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
