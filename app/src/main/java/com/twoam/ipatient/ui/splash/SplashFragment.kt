@@ -2,6 +2,7 @@ package com.twoam.ipatient.ui.splash
 
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -42,12 +43,13 @@ class SplashFragment : Fragment() {
 
             override fun onFinish() {
                 if (true) {
+                    Log.d(TAG, "onFinish: ")
                     findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
                 } else {
                     findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
                 }
             }
-        }
+        }.start()
 
     }
 
