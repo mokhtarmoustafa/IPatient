@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.constraintlayout.widget.Group
 import com.twoam.ipatient.R
 import com.twoam.ipatient.databinding.HomeFragmentBinding
 
@@ -22,6 +25,10 @@ class HomeFragment : Fragment() {
         fun newInstance() = HomeFragment()
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        activity?.findViewById<Group>(R.id.group_top_data)?.visibility = View.VISIBLE
+    }
 
     //region events
     override fun onCreateView(

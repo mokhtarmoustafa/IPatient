@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.navigation.NavigationView
 import com.twoam.ipatient.R
@@ -18,6 +20,7 @@ class SplashFragment : Fragment() {
     private lateinit var binding: FragmentSplashBinding
      private val duration=1500L
     //endregion
+
 
     //region Events
     override fun onCreateView(
