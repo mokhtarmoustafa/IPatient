@@ -5,11 +5,16 @@
     <color name="primaryDarkColor">#62757f</color>
 
     <color name="secondaryColor">#ffd54f</color>
-    <color name="secondaryLightColor"> #ffff81</color>
+    <color name="secondaryLightColor">#ffff81</color>
     <color name="secondaryDarkColor">#c8a415</color>
 
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#263238</color>
     <color name="white">#ffffff</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
 
 </resources>

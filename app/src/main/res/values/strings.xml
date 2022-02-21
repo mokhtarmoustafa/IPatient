@@ -13,4 +13,7 @@
     <string name="user_name">User Name</string>
     <string name="password">Password</string>
     <string name="don_t_have_an_account_register_now">Don\'t have an account <font fgcolor='#c8a415'>Register now</font></string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
