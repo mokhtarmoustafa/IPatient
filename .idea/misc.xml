@@ -3,18 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/edit_text_password_selector.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/edit_text_selector.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/edit_text_shape.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/edit_text_user_selector.xml" value="0.1" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_add_appointment.xml" value="0.184375" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_add_prescription.xml" value="0.184375" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_appointments.xml" value="0.184375" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_empty_list.xml" value="0.184375" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_home.xml" value="0.184375" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_launcher_background.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_login.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_password.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_password_lock.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_password_lock_select.xml" value="0.184375" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_profile.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_profile_select.xml" value="0.184375" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_relative.xml" value="0.184375" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/ic_search.xml" value="0.184375" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/drawable/text_input_box_stroke.xml" value="0.184375" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/layout/fragment_splash.xml" value="0.1" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/layout/home_fragment.xml" value="0.22" />
+        <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/layout/login_fragment.xml" value="0.25" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/layout/verification_fragment.xml" value="0.12273550724637682" />
         <entry key="..\:/AdroidCodeExamples/WorkSpace/IPatient/IPatient/app/src/main/res/menu/home_menu.xml" value="0.1" />
       </map>

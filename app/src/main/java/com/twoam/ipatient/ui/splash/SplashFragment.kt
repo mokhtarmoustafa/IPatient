@@ -40,12 +40,12 @@ class SplashFragment : Fragment() {
     //endregion Helper FUnctions
     private fun navigate() {
 
-        object : CountDownTimer(duration, 1000) {
+        object : CountDownTimer(1000, 1000) {
             override fun onTick(p0: Long) {
             }
 
             override fun onFinish() {
-                if (true) {
+                if (false) {
                     Log.d(TAG, "onFinish: ")
                     findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
                 } else {

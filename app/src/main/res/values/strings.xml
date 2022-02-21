@@ -9,4 +9,8 @@
     <string name="i_patient">I-Patient</string>
     <string name="no_data">No Data</string>
     <string name="copy_rights_reserved_2am">Copy Rights reserved @2AM</string>
+    <string name="login">Login</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account_register_now">Don\'t have an account <font fgcolor='#c8a415'>Register now</font></string>
 </resources>
