@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">IPatient</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="relative">Relative</string>
+    <string name="appointments">Appointments</string>
+    <string name="content">content</string>
+    <string name="i_patient">I-Patient</string>
+    <string name="no_data">No Data</string>
+    <string name="copy_rights_reserved_2am">Copy Rights reserved @2AM</string>
 </resources>

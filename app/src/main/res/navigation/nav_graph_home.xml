@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.twoam.ipatient.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.twoam.ipatient.ui.auth.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.twoam.ipatient.ui.auth.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.twoam.ipatient.ui.auth.ForgetPasswordFragment"
+        android:label="forget_password_fragment"
+        tools:layout="@layout/forget_password_fragment" >
+        <action
+            android:id="@+id/action_forgetPasswordFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.twoam.ipatient.ui.auth.VerificationFragment"
+        android:label="verification_fragment"
+        tools:layout="@layout/verification_fragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.twoam.ipatient.ui.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.twoam.ipatient.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_createPrescriptionFragment"
+            app:destination="@id/createPrescriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAppointmentFragment"
+        android:name="com.twoam.ipatient.ui.appointment.CreateAppointmentFragment"
+        android:label="create_appointment_fragment"
+        tools:layout="@layout/create_appointment_fragment" />
+    <fragment
+        android:id="@+id/appointmentsFragment"
+        android:name="com.twoam.ipatient.ui.appointment.AppointmentsFragment"
+        android:label="appointments_fragment"
+        tools:layout="@layout/appointments_fragment" >
+        <action
+            android:id="@+id/action_appointmentsFragment_to_createAppointmentFragment"
+            app:destination="@id/createAppointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPrescriptionFragment"
+        android:name="com.twoam.ipatient.ui.home.CreatePrescriptionFragment"
+        android:label="create_prescription_fragment"
+        tools:layout="@layout/create_prescription_fragment" />
+    <fragment
+        android:id="@+id/appointmentsFragment2"
+        android:name="com.twoam.ipatient.ui.appointment.AppointmentsFragment"
+        android:label="appointments_fragment2"
+        tools:layout="@layout/appointments_fragment2" />
+</navigation>
