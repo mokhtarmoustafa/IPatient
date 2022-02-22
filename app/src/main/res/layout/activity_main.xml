@@ -7,75 +7,84 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             tools:context=".MainActivity">
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/iv_profile"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/ic_profile"
-            app:layout_constraintStart_toStartOf="@+id/start"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_app_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/i_patient"
-            android:textColor="@color/secondaryDarkColor"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/iv_profile" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintStart_toStartOf="@+id/start"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/iv_search"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_search"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
-            app:layout_constraintEnd_toStartOf="@+id/end"
-            app:layout_constraintTop_toTopOf="@+id/iv_profile" />
+            <TextView
+                android:id="@+id/tv_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/i_patient"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_profile" />
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:defaultNavHost="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_profile"
-            app:navGraph="@navigation/nav_graph_home" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="14dp" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_end="14dp" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_search"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+                app:layout_constraintEnd_toStartOf="@+id/end"
+                app:layout_constraintTop_toTopOf="@+id/iv_profile" />
 
-        <androidx.constraintlayout.widget.Group
-            android:id="@+id/group_top_data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:constraint_referenced_ids="iv_profile,tv_app_name,iv_search"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/end"
-            app:layout_constraintStart_toStartOf="@id/start"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="visible"
-            android:visibility="gone"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:defaultNavHost="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_profile"
+                app:navGraph="@navigation/nav_graph_home" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="14dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="14dp" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_top_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="iv_profile,tv_app_name,iv_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/end"
+                app:layout_constraintStart_toStartOf="@id/start"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

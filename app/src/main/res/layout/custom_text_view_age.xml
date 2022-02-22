@@ -1,0 +1,10 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tolls="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:textColor="@color/primaryTextColor"
+    android:textSize="18sp"
+    tolls:text="Dummy Data">
+
+</TextView>

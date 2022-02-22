@@ -57,7 +57,7 @@ class LoginFragment : Fragment() {
                 binding.etPassword.requestFocus()
                 return false
             }
-            binding.etPassword.text?.trim()!!.length>6 -> {
+            binding.etPassword.text?.trim()!!.length<6 -> {
                 binding.etUserName.error = "Password can't be less than 6 digits."
                 binding.etPassword.requestFocus()
                 return false

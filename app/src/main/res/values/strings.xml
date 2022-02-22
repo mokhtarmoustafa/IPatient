@@ -16,4 +16,27 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="gender">Gender</string>
+    <string name="telephone">Tel</string>
+    <string name="email">Email</string>
+    <string name="type">Type</string>
+    <string-array name="gender">
+        <item id="male">Male</item>
+        <item id="female">Female</item>
+    </string-array>
+
+    <string-array name="relative_degree">
+        <item id="grand_father">Grand Father</item>
+        <item id="grand_mother">Grand Mother</item>
+        <item id="father">Farther</item>
+        <item id="mother">Mother</item>
+        <item id="uncle">Uncle</item>
+        <item id="aunt">Aunt</item>
+        <item id="brother">Brother</item>
+        <item id="sister">Sister</item>
+        <item id="cousin">Cousin</item>
+    </string-array>
 </resources>
