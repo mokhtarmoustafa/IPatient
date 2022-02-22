@@ -26,6 +26,12 @@
         <item name="cornerSize">32dp</item>
     </style>
 
+    <style name="OutLineDropDown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded
+        </item>
+    </style>
+
 
 
 </resources>

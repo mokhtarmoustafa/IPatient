@@ -9,7 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
         android:id="@+id/clProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
@@ -61,146 +61,105 @@
             app:layout_constraintVertical_bias="0.83" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/name"
-        android:textColorHint="@color/primaryTextColor"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/clProfile" />
 
-    <EditText
-        android:id="@+id/et_name"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilName"
+        style="@style/OutlinedRoundedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:autofillHints="name"
-        android:background="@drawable/edit_text_custom"
-        android:imeOptions="actionNext"
-        android:inputType="text"
-        android:lines="1"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvName"
+        android:layout_marginTop="10dp"
+        android:hint="@string/name"
+        app:endIconMode="clear_text"
         app:layout_constraintEnd_toStartOf="@+id/end"
-        app:layout_constraintStart_toEndOf="@+id/tvName"
-        app:layout_constraintTop_toTopOf="@+id/tvName"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/tv_gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/gender"
-        android:textColorHint="@color/primaryTextColor"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvName"
         app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+        app:layout_constraintTop_toBottomOf="@+id/clProfile">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilTelephone"
+        style="@style/OutlinedRoundedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/telephone"
+        app:layout_constraintEnd_toStartOf="@id/end"
+        app:layout_constraintStart_toEndOf="@id/start"
+        app:layout_constraintTop_toBottomOf="@+id/ilName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:lines="1"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilEmail"
+        style="@style/OutlinedRoundedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/email"
+        app:layout_constraintEnd_toStartOf="@+id/end"
+        app:layout_constraintStart_toEndOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/ilTelephone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ilGender"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        style="@style/OutLineDropDown"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_gender"
-        app:layout_constraintEnd_toEndOf="@id/end"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/et_name"
-        app:layout_constraintTop_toTopOf="@+id/tv_gender">
+        android:layout_marginTop="10dp"
+        android:hint="@string/gender"
+        app:layout_constraintEnd_toStartOf="@+id/end"
+        app:layout_constraintStart_toEndOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/ilEmail">
 
         <AutoCompleteTextView
-            android:id="@+id/acAge"
+            android:id="@+id/acGender"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/edit_text_custom"
             android:editable="false"
             android:imeOptions="actionNext" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tvEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/email"
-        android:textColorHint="@color/primaryTextColor"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/ilGender" />
-
-    <EditText
-        android:id="@+id/et_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="name"
-        android:background="@drawable/edit_text_custom"
-        android:imeOptions="actionNext"
-        android:inputType="textEmailAddress"
-        android:lines="1"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvEmail"
-        app:layout_constraintEnd_toStartOf="@+id/end"
-        app:layout_constraintStart_toEndOf="@+id/tv_gender"
-        app:layout_constraintTop_toTopOf="@+id/tvEmail" />
-
-    <TextView
-        android:id="@+id/tvTelephone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/telephone"
-        android:textColorHint="@color/primaryTextColor"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/et_email" />
-
-    <EditText
-        android:id="@+id/et_telephone"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="name"
-        android:background="@drawable/edit_text_custom"
-        android:imeOptions="actionNext"
-        android:inputType="phone"
-        android:lines="1"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvTelephone"
-        app:layout_constraintEnd_toStartOf="@+id/end"
-        app:layout_constraintStart_toStartOf="@+id/et_email"
-        app:layout_constraintTop_toTopOf="@+id/tvTelephone" />
-
-
-    <TextView
-        android:id="@+id/tv_userType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/type"
-        android:textColorHint="@color/primaryTextColor"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/et_telephone" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ilUserType"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        style="@style/OutLineDropDown"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_userType"
-        app:layout_constraintEnd_toEndOf="@id/end"
-        app:layout_constraintStart_toStartOf="@+id/et_telephone"
-        app:layout_constraintTop_toTopOf="@+id/tv_userType">
+        android:layout_marginTop="10dp"
+        android:hint="@string/type"
+        app:layout_constraintEnd_toStartOf="@id/end"
+        app:layout_constraintStart_toEndOf="@id/start"
+        app:layout_constraintTop_toBottomOf="@+id/ilGender">
 
         <AutoCompleteTextView
             android:id="@+id/acUserType"
@@ -214,43 +173,38 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tvBirthDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Birth"
-        android:textColorHint="@color/primaryTextColor"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_userType"
-        app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/ilUserType" />
 
-    <EditText
-        android:id="@+id/etBirthDate"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilBirthDate"
+        style="@style/OutlinedRoundedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:autofillHints="name"
-        android:background="@drawable/edit_text_custom"
-        android:enabled="false"
-        android:imeOptions="actionNext"
-        android:inputType="text"
-        android:lines="1"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvBirthDate"
-        app:layout_constraintEnd_toStartOf="@+id/end"
-        app:layout_constraintStart_toStartOf="@+id/ilUserType"
-        app:layout_constraintTop_toTopOf="@+id/tvBirthDate" />
+        android:layout_marginTop="10dp"
+        android:hint="@string/birth_date"
+        app:layout_constraintEnd_toStartOf="@id/end"
+        app:layout_constraintStart_toEndOf="@id/start"
+        app:layout_constraintTop_toBottomOf="@id/ilUserType">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etBirthDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:lines="1"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_margin="32dp"
         android:backgroundTint="@color/secondaryDarkColor"
         android:padding="12dp"
         android:text="@string/register"
@@ -258,8 +212,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBirthDate" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/start"

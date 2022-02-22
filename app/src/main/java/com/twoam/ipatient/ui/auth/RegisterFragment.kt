@@ -47,8 +47,8 @@ class RegisterFragment : Fragment() {
             R.layout.custom_text_view_age,
             resources.getStringArray(R.array.gender)
         )
-        binding.acAge.setAdapter(ageAdapter)
-        binding.acAge.setAdapter(ageAdapter)
+        binding.acGender.setAdapter(ageAdapter)
+        binding.acGender.setAdapter(ageAdapter)
     }
     private fun loadRelativeData() {
         val ageAdapter = ArrayAdapter(
