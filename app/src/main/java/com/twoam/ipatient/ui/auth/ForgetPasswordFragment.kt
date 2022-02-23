@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.twoam.ipatient.R
+import com.twoam.ipatient.databinding.ForgetPasswordFragmentBinding
 
 class ForgetPasswordFragment : Fragment() {
 
@@ -15,18 +17,22 @@ class ForgetPasswordFragment : Fragment() {
     }
 
     private lateinit var viewModel: ForgetPasswordViewModel
+    private lateinit var binding: ForgetPasswordFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.forget_password_fragment, container, false)
+    ): View {
+        viewModel = ViewModelProvider(this).get(ForgetPasswordViewModel::class.java)
+        binding = ForgetPasswordFragmentBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ForgetPasswordViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 
 }
