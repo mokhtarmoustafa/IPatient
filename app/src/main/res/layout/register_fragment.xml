@@ -69,6 +69,7 @@
         android:layout_marginTop="5dp"
         android:hint="@string/name"
         app:endIconMode="clear_text"
+        android:transitionName="transition_username"
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toBottomOf="@+id/clProfile">
@@ -209,6 +210,7 @@
         android:layout_marginTop="5dp"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:transitionName="transition_password"
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toBottomOf="@+id/ilBirthDate"
@@ -260,6 +262,7 @@
         android:text="@string/register"
         android:textColor="@color/white"
         android:textSize="18sp"
+        android:transitionName="transition_action"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import com.twoam.ipatient.R
 import com.twoam.ipatient.databinding.LoginFragmentBinding
@@ -34,14 +35,14 @@ class LoginFragment : Fragment() {
     ): View {
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
         binding = LoginFragmentBinding.inflate(layoutInflater, container, false)
-//        sharedElementEnterTransition = TransitionInflater.from(context).inflateTransition(android.R.transition.move)
+        sharedElementEnterTransition = TransitionInflater.from(context).inflateTransition(android.R.transition.move)
 
-        sharedElementEnterTransition = ChangeBounds().apply {
-            duration = 750
-        }
-        sharedElementReturnTransition= ChangeBounds().apply {
-            duration = 750
-        }
+//        sharedElementEnterTransition = ChangeBounds().apply {
+//            duration = 750
+//        }
+//        sharedElementReturnTransition= ChangeBounds().apply {
+//            duration = 750
+//        }
 
         return binding.root
     }
@@ -83,7 +84,10 @@ class LoginFragment : Fragment() {
 
     private fun register()
     {
-        findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        val extras = FragmentNavigatorExtras(
+            binding.tiUserName to "transition_username",binding.tiPassword to "transition_password",binding.btnLogin to "transition_action")
+
+        findNavController().navigate(R.id.action_loginFragment_to_registerFragment,null,null,extras)
     }
    private fun forgetPassword()
     {
