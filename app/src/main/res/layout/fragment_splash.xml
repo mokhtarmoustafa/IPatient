@@ -14,16 +14,15 @@
 
         <ImageView
             android:id="@+id/iv_logo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_appointments"
-            app:tint="@color/secondaryDarkColor"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:contentDescription="@string/content"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_launcher"
+            android:transitionName="firstTransitionName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/content" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_name"
@@ -32,7 +31,7 @@
             android:layout_marginTop="19dp"
             android:gravity="center"
             android:text="@string/i_patient"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@color/light_blue_600"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +44,7 @@
             android:layout_marginBottom="16dp"
             android:gravity="center"
             android:text="@string/copy_rights_reserved_2am"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@color/secondaryTextColor"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

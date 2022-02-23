@@ -2,6 +2,8 @@ package com.twoam.ipatient.ui.auth
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.transition.ChangeBounds
+import android.transition.TransitionInflater
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -22,13 +24,25 @@ class LoginFragment : Fragment() {
         fun newInstance() = LoginFragment()
     }
 
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+//        sharedElementEnterTransition = TransitionInflater.from(context).inflateTransition(android.R.transition.move)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
         binding = LoginFragmentBinding.inflate(layoutInflater, container, false)
+//        sharedElementEnterTransition = TransitionInflater.from(context).inflateTransition(android.R.transition.move)
+
+        sharedElementEnterTransition = ChangeBounds().apply {
+            duration = 750
+        }
+        sharedElementReturnTransition= ChangeBounds().apply {
+            duration = 750
+        }
+
         return binding.root
     }
 

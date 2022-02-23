@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.navigation.NavigationView
 import com.twoam.ipatient.R
@@ -18,7 +19,7 @@ import com.twoam.ipatient.databinding.FragmentSplashBinding
 class SplashFragment : Fragment() {
     //region Variables
     private lateinit var binding: FragmentSplashBinding
-     private val duration=1500L
+    private val duration = 1500L
     //endregion
 
 
@@ -29,6 +30,7 @@ class SplashFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentSplashBinding.inflate(layoutInflater, container, false)
+
         return binding.root
     }
 
@@ -49,7 +51,9 @@ class SplashFragment : Fragment() {
                     Log.d(TAG, "onFinish: ")
                     findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
                 } else {
-                    findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
+                    val extras = FragmentNavigatorExtras(
+                        binding.ivLogo to "firstTransitionName")
+                    findNavController().navigate(R.id.action_splashFragment_to_loginFragment,null,null,extras)
                 }
             }
         }.start()
