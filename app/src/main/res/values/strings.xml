@@ -24,6 +24,9 @@
     <string name="email">Email</string>
     <string name="type">Type</string>
     <string name="birth_date">Birth Date</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="next">Next</string>
     <string-array name="gender">
         <item id="male">Male</item>
         <item id="female">Female</item>

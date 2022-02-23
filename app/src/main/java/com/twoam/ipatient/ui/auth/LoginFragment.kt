@@ -36,6 +36,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnLogin.setOnClickListener { if (validateAll()) login() }
         binding.tvRegister.setOnClickListener { register() }
+        binding.tvForgetPassword.setOnClickListener { forgetPassword() }
     }
 
     private fun login() {
@@ -69,6 +70,10 @@ class LoginFragment : Fragment() {
     private fun register()
     {
         findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+    }
+   private fun forgetPassword()
+    {
+        findNavController().navigate(R.id.action_loginFragment_to_forgetPasswordFragment)
     }
 
 
